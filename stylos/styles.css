@@ -7,16 +7,42 @@
 
 /* ESTILOS PARA INDEX.HTML */
 
+body {
+    background-image: url("../img/codigo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
     text-align: center;
-    margin: 5rem 0;
+    margin: 4rem 0;
     font-size: 3rem;
+}
+
+header h1 {
+    color: white;
+}
+
+.container-btn {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-cv {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.btn-cv:hover {
+    background-color: black;
+    color: white;
 }
 
 .card-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 
 .card {
@@ -26,6 +52,11 @@ header {
     border: 1px solid black;
     padding: 1rem;
     box-shadow: 5px 5px 5px black;
+    background-color: aliceblue;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card-title {
