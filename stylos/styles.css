@@ -2,24 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Handlee", cursive;
 }
-
 /* ESTILOS PARA INDEX.HTML */
 
 body {
-    background-image: url("../img/codigo.jpg");
+    background-image: url("../img/placa.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-header {
+.header-nombre {
     text-align: center;
     margin: 4rem 0;
     font-size: 3rem;
 }
 
-header h1 {
+.header-nombre h1 {
     color: white;
 }
 
@@ -31,32 +32,70 @@ header h1 {
 .btn-cv {
     border: 1px solid black;
     padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .btn-cv:hover {
     background-color: black;
     color: white;
+    box-shadow: 5px 5px 5px rgb(36, 251, 3);
 }
 
 .card-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
     padding: 1rem;
-    box-shadow: 5px 5px 5px black;
     background-color: aliceblue;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    cursor: pointer;
+
 }
 
 .card:hover {
-    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgb(36, 251, 3);
+}
+
+.card.expanded {
+    width: 80%;
+    height: 90vh;
+    /* 90% de la altura de la ventana */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-back {
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card.expanded .card-front {
+    display: none;
+}
+
+.card.expanded .card-back {
+    display: block;
 }
 
 .card-title {
@@ -64,12 +103,7 @@ header h1 {
     padding: 0.5rem;
     width: 12rem;
     text-align: center;
-    /* box-shadow: 5px 5px 5px black; */
 }
-
-/* .card-img {
-    box-shadow: 5px 5px 5px black;
-} */
 
 .card-body {
     text-align: center;
@@ -77,19 +111,35 @@ header h1 {
     padding: 0.5rem 3rem;
 }
 
-/* ESTILOS PARA SOBRE MI.HTML */
+
+/* ESTILOS PARA SOBRE MI */
+
+.card-back {
+    background-color: #292929;
+}
 
 .sobreMi-header {
-    text-align: left;
+    text-align: center;
     margin-left: 2rem;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
-.sobreMi-container{
+.sobreMi-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.sobreMi-titulo {
+    color: white;
+    font-size: 3rem;
+}
+
+.descripcion {
+    font-size: 1.5rem;
+    color: white;
 }
 
 .sobreMi-habilidades {
@@ -97,4 +147,21 @@ header h1 {
     align-items: center;
     justify-content: space-evenly;
     margin-top: 3rem;
+}
+
+.habilidades-titulo {
+    color: white;
+}
+
+.habilidades-lista {
+    color: white;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 320px) {
+    body {
+        flex-direction: column;
+    }
 }
