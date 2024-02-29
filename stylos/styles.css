@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Handlee", cursive;
+    font-family: "Fira Code", monospace;
 }
 /* ESTILOS PARA INDEX.HTML */
 
 body {
-    background-image: url("../img/placa.jpg");
+    background-image: url("../img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     gap: 2rem;
@@ -22,6 +22,7 @@ body {
 
 .header-nombre h1 {
     color: white;
+    text-shadow: 7px 5px 5px rgba(187, 192, 232, 0.79);
 }
 
 .container-btn {
@@ -33,18 +34,21 @@ body {
     border: 1px solid black;
     padding: 1rem;
     font-size: 1.5rem;
+    border-radius: 30px;
 }
 
 .btn-cv:hover {
-    background-color: black;
+    background-color: rgb(28, 45, 178);
     color: white;
-    box-shadow: 5px 5px 5px rgb(36, 251, 3);
+    box-shadow: 10px 10px 10px rgb(0, 30, 255);
+    
 }
 
 .card-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    border-radius: 30px;
 }
 
 .card {
@@ -62,7 +66,9 @@ body {
 }
 
 .card:hover {
-    box-shadow: 5px 5px 5px rgb(36, 251, 3);
+    box-shadow: 10px 10px 10px rgb(0, 30, 255);
+    background-color: rgb(28, 45, 178);
+    color: white;
 }
 
 .card.expanded {
@@ -99,7 +105,7 @@ body {
 }
 
 .card-title {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 0.5rem;
     width: 12rem;
     text-align: center;
@@ -107,7 +113,7 @@ body {
 
 .card-body {
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 0.5rem 3rem;
 }
 
@@ -115,7 +121,9 @@ body {
 /* ESTILOS PARA SOBRE MI */
 
 .card-back {
-    background-color: #292929;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sobreMi-header {
@@ -135,18 +143,20 @@ body {
 .sobreMi-titulo {
     color: white;
     font-size: 3rem;
+    text-shadow: 7px 5px 5px rgba(187, 192, 232, 0.79);
 }
 
 .descripcion {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
+    margin: 0 2rem;
 }
 
 .sobreMi-habilidades {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: left;
     margin-top: 3rem;
+    flex-direction: column;
 }
 
 .habilidades-titulo {
@@ -155,6 +165,16 @@ body {
 
 .habilidades-lista {
     color: white;
+}
+
+.habilidadesDuras {
+    margin: 1rem;
+    padding: 1rem;  
+}
+
+.habilidadesBlandas{
+    margin: 1rem;
+    padding: 1rem;  
 }
 
 
