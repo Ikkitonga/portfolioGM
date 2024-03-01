@@ -14,16 +14,60 @@ body {
     margin-top: 3rem;
 }
 
-.header-nombre {
+/* estilos h1 tipeo */
+
+#typed-text {
+    color: #fff;
+    font-size: 3rem;
+    max-width: 100%; /* Establecer un ancho máximo */
+    border-right: .15em solid orange; /* Cursor efecto tipeo */
+    font-family: "Fira Code", monospace;
+    white-space: nowrap; /* Evitar que el texto se rompa */
+    overflow: hidden; /* Ocultar texto adicional */
+    animation: typing 3s steps(38, end), blink-caret .5s step-end infinite; /* Animación de tipeo y cursor */
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(250, 250, 249);
+    }
+  }
+  
+
+/* .header-nombre {
     text-align: center;
     margin: 4rem 0;
     font-size: 3rem;
-}
+} */
 
-.header-nombre h1 {
+/* .header-nombre h1 {
     color: white;
     text-shadow: 7px 5px 5px rgba(187, 192, 232, 0.79);
-}
+    font-size: 5rem;
+    font-weight: 300;
+} */
+
+/* h1:hover {
+    background: #ccc;
+    background: linear-gradient(90deg, #7779fc, #01417c);
+    font-size: 5rem;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 2px rgba(187, 192, 232, 0.79);
+} */
 
 .container-btn {
     text-align: center;
@@ -38,7 +82,7 @@ body {
 }
 
 .btn-cv:hover {
-    background-color: rgb(28, 45, 178);
+    background: linear-gradient(180deg, #7779fc, #01417c);
     color: white;
     box-shadow: 10px 10px 10px rgb(0, 30, 255);
     
@@ -67,7 +111,7 @@ body {
 
 .card:hover {
     box-shadow: 10px 10px 10px rgb(0, 30, 255);
-    background-color: rgb(28, 45, 178);
+    /* background: linear-gradient(180deg, #7779fc, #01417c); */
     color: white;
 }
 
@@ -178,10 +222,92 @@ body {
 }
 
 
+/* TITULOS Y CERTIFICACIONES */
+
+.card-img-titulos {
+    background-image: url("../img/titulos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-img-titulos:hover {
+    background-color: transparent;
+    color: black;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 3rem;
+}
+
+.footer-p{
+    text-align: center;
+    color: white;
+}
+
+
 /* media queries */
 
 @media screen and (max-width: 320px) {
     body {
+        display: flex;
         flex-direction: column;
+    }
+
+    .header-nombre {
+        margin: 1rem;
+    }
+
+    #typed-text {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        white-space: normal;
+    }
+
+    .container-btn {
+        margin: 1rem;
+    }
+
+    .btn-cv {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card-back {
+        width: auto;
+    }
+
+    .sobreMi-img {
+        display: none;
+    }
+
+    .sobreMi-titulo {
+        font-size: 1.3rem;
+    }
+
+    .sobreMi-descripcion{
+        margin-top: 0.5rem;
+    }
+    .descripcion {
+        text-align: center;
+        font-size: 0.7rem;
+        margin: auto;
+    }
+
+    .habilidades-titulo {
+        text-align: center;
+    }
+
+    .habilidades-lista{
+        font-size: 0.7rem;
     }
 }
